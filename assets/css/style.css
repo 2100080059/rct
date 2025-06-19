@@ -20,18 +20,32 @@ body {
 header {
   background-color: #2E8B57; /* refined primary color */
   color: white;
+  display: flex;               /* make it a flex container */
+  flex-direction: column;      /* stack children vertically */
+  align-items: center;         /* center them horizontally */
+  justify-content: center;     /* center them vertically */
   text-align: center;
   padding: 2rem 1rem;
   position: relative;
 }
 
+header img {
+  /* remove absolute positioning */
+  position: static;
+  width: 120px;       /* responsive size */
+  height: auto;
+  margin-bottom: 1rem;/* space between logo & title */
+}
+
 header h1 {
   margin: 0;
+  font-size: 2rem;    /* adjust as you like */
 }
 
 header p {
   margin: 1rem 0 0;
-  font-style: italic;
+  font-style: italic; 
+  font-size: 1.1rem;
 }
 
 header img {
