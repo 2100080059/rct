@@ -18,15 +18,37 @@ body {
 
 /* — Header — */
 header {
-  background-color: #2E8B57; /* refined primary color */
+  background-color: #2E8B57;
   color: white;
   display: flex;               /* make it a flex container */
   flex-direction: column;      /* stack children vertically */
   align-items: center;         /* center them horizontally */
   justify-content: center;     /* center them vertically */
-  text-align: center;
   padding: 2rem 1rem;
   position: relative;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+  header img {
+    width: 90px;
+    margin-bottom: 0.75rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;         /* let nav items wrap to new lines */
+    justify-content: center;
+  }
+  nav li {
+    margin: 0.4rem;
+  }
 }
 
 header img {
@@ -43,17 +65,9 @@ header h1 {
 }
 
 header p {
-  margin: 1rem 0 0;
-  font-style: italic; 
+  margin: 0.5rem 0 0;
+  font-style: italic;
   font-size: 1.1rem;
-}
-
-header img {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  width: 130px;
-  height: 110px;
 }
 
 /* — Navigation — */
@@ -172,37 +186,6 @@ nav ul li a:hover {
 .carousel .next {
   right: 10px;
 }
-.work-card {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
-}
-
-.work-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.work-card .label {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  font-size: 16px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.work-card:hover {
-  transform: scale(1.03);
-}
 footer {
   text-align: center;
   padding: 5px; /* Reduced padding */
@@ -229,17 +212,36 @@ body {
   color: #333;
 }
 
-/* Header */
+/* — Header — */
 header {
   background-color: #2E8B57;
   color: white;
-  text-align: center;
+  display: flex;               /* make it a flex container */
+  flex-direction: column;      /* stack children vertically */
+  align-items: center;         /* center them horizontally */
+  justify-content: center;     /* center them vertically */
   padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
 }
 
 header img {
-  width: 130px;
-  height: 110px;
+  /* remove absolute positioning */
+  position: static;
+  width: 120px;       /* responsive size */
+  height: auto;
+  margin-bottom: 1rem;/* space between logo & title */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;    /* adjust as you like */
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+  font-size: 1.1rem;
 }
 
 /* Navigation */
@@ -564,3 +566,4 @@ footer {
   color: white;
   font-size: 12px;
 }
+
