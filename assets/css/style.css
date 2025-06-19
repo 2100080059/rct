@@ -1,0 +1,521 @@
+/* Particles container: ensure it covers the entire viewport */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind the content */
+  top: 0;
+  left: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #bbebd5; /* fallback background */
+  color: #333;
+}
+
+/* — Header — */
+header {
+  background-color: #2E8B57; /* refined primary color */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 1rem 0 0;
+  font-style: italic;
+}
+
+header img {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 130px;
+  height: 110px;
+}
+
+/* — Navigation — */
+nav {
+  background-color: #3CB371; /* a slightly lighter green for variety */
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #FFA500; /* accent color on hover */
+}
+
+/* — Quote Section — */
+.quote-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-image img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.quote-text h2 {
+  margin-top: 0;
+}
+
+/* — Carousel Section — */
+.carousel-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.carousel-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Set a fixed height for the carousel to make images uniform */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 500px;  /* Adjust this value as needed for your design */
+}
+
+.carousel-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+/* Ensure images cover the container consistently */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation buttons styling */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(46, 139, 87, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.2rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+}
+
+.carousel button:hover {
+  background-color: #FFA500;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+footer {
+  text-align: center;
+  padding: 5px; /* Reduced padding */
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px; /* Smaller font size */
+}
+/* Background Particles */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* Universal Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #bbebd5, #2E8B57);
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header img {
+  width: 130px;
+  height: 110px;
+}
+
+/* Navigation */
+nav {
+  background-color: #3CB371;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #FFA500;
+}
+
+/* About Section */
+.about-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Gallery */
+.gallery-section {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px;
+}
+
+/* Members Section */
+.members-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+/* Member Cards */
+.member-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Member Images */
+.member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px;
+}
+/* Program Section */
+.program-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.program {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.program:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Program Icons */
+.program img {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Volunteer Button */
+.volunteer-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  font-size: 16px;
+  color: white;
+  background-color: #FFA500;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.volunteer-button:hover {
+  background-color: #FF7F00;
+}
+
+/* Testimonials Section */
+.testimonial-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px;
+}
+
+/* Donation Section */
+.donation-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Donate Button */
+.donate-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 1rem;
+  font-size: 18px;
+  color: white;
+  background-color: #FFA500;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.donate-button:hover {
+  background-color: #FF7F00;
+}
+
+/* Impact Section */
+.impact-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Impact Boxes */
+.impact-box {
+  display: inline-block;
+  margin: 1rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.impact-box:hover {
+  transform: scale(1.1);
+}
+
+.impact-box p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Contact Section */
+.contact-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Button */
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #FFA500;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #FF7F00;
+}
+
+/* Map Section */
+.map-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.map-section iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #2E8B57;
+  color: white;
+  font-size: 12px;
+}
