@@ -22,36 +22,50 @@ header {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  position: relative;
 }
 
+/* Logo styling */
 .header-logo {
-  position: absolute;
-  top: 15px;
-  left: 30px;
   width: 110px;
   height: auto;
+  margin: 0 auto 1rem;
+  display: block;
 }
 
+/* General image styling (if used elsewhere) */
 header img {
-  /* remove absolute positioning */
-  position: static;
-  width: 120px;       /* responsive size */
+  width: 100%;
   height: auto;
-  margin-bottom: 1rem;/* space between logo & title */
 }
 
+/* Title styling */
 header h1 {
   margin: 0;
-  font-size: 2rem;    /* adjust as you like */
+  font-size: 2rem;
 }
 
+/* Subtitle styling */
 header p {
   margin: 0.5rem 0 0;
   font-style: italic;
   font-size: 1.1rem;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header-logo {
+    width: 90px;
+    margin-bottom: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
 /* — Navigation — */
 nav {
   background-color: #3CB371; /* a slightly lighter green for variety */
