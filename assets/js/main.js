@@ -129,15 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
     "retina_detect": true
   });
 });
-// Fetch and update total visit count using CountAPI
-fetch('https://gocount.com/api/v1/track/rctvijayawada.org')
-  .then(response => response.json())
-  .then(data => {
-    const visitElement = document.getElementById('visitCount');
-    if (visitElement) {
-      visitElement.textContent = "Total Visitors: " + data.count;
-    }
-  })
-  .catch(error => {
-    console.error("Error fetching visit count:", error);
-  });
+
