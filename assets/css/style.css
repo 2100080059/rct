@@ -664,6 +664,13 @@ footer {
   height: 450px;
   border-radius: 10px;
 }
+#visitCount {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
 
 /* Footer */
 footer {
