@@ -1,4 +1,4 @@
-// Indian-style comma formatting
+// Safe Indian number formatting
 function formatIndianNumber(x) {
   x = x.toString();
   let lastThree = x.substring(x.length - 3);
@@ -9,16 +9,24 @@ function formatIndianNumber(x) {
   return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
 }
 
-// Fetch visitor count from PHP file
-fetch("counter.php")
-  .then(response => response.text())
-  .then(count => {
-    document.getElementById("visitorCount").textContent = formatIndianNumber(count);
-  })
-  .catch(() => {
-    document.getElementById("visitorCount").textContent = "Unavailable";
-  });
+// Local visitor count (for demo)
+let count = localStorage.getItem('visitCount');
+if (!count) {
+  count = 1;
+} else {
+  count = parseInt(count) + 1;
+}
+localStorage.setItem('visitCount', count);
 
-// Display today's date as site last updated
+// Display count
+const countEl = document.getElementById('visitorCount');
+if (countEl) {
+  countEl.textContent = formatIndianNumber(count);
+}
+
+// Set today's date
 const today = new Date();
-document.getElementById('lastUpdatedDate').textContent = today.toLocaleDateString('en-GB');
+const dateEl = document.getElementById('lastUpdatedDate');
+if (dateEl) {
+  dateEl.textContent = today.toLocaleDateString('en-GB');
+}
