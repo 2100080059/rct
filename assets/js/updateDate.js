@@ -2,7 +2,7 @@
 function formatIndianNumber(num) {
   return num.toString()
     .replace(/\B(?=(\d{2})+(?!\d{3}))/g, ",")
-    .replace(/(\d+)(?=(\d{3})+(?!\d))/g, "$$1,");
+    .replace(/(\d+)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
 // Visitor count using localStorage
