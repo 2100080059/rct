@@ -119,7 +119,13 @@
   <div class="last-updated">
     Site Last Updated: <span id="lastUpdatedDate">25/09/2024</span>
   </div>
-  
+  <script>
+    // Change this to today's date or dynamic logic if needed
+    const lastUpdated = new Date();
+    const formattedDate = lastUpdated.toLocaleDateString('en-GB'); // e.g., "05/07/2025"
+    document.getElementById('lastUpdatedDate').textContent = formattedDate;
+    
+  </script>
     
     <!-- Contact Info -->
     <div style="flex: 1; min-width: 250px; padding: 20px;">
