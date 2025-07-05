@@ -681,32 +681,31 @@ footer {
   font-size: 12px;
 }
 body {
-      background-color: #2f3837;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 2rem;
-    }
+  background-color: #2f3837;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
 
-    .counter {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
+.counter-section {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-    .counter-number {
-      background-color: #e7f5e4;
-      color: #2c9e72;
-      padding: 0.3rem 0.6rem;
-      border-radius: 8px;
-      font-weight: bold;
-      font-family: monospace;
-      font-size: 1.8rem;
-      letter-spacing: 0.1rem;
-    }
+.counter-box {
+  background-color: #e1f4e1;
+  color: #2c9e72;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-    .last-updated {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
+.update-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
