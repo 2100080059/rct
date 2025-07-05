@@ -1,15 +1,20 @@
 <?php
-$file = "counter.js";
+$file = "counter.txt";
 
-// Read current count
+// Check if the file exists
+if (!file_exists($file)) {
+  file_put_contents($file, "0");
+}
+
+// Get the current count
 $count = (int)file_get_contents($file);
 
-// Increment count
+// Increment the count
 $count++;
 
-// Save new count
+// Save the new count
 file_put_contents($file, $count);
 
-// Return the count to frontend
+// Return the updated count
 echo $count;
 ?>
