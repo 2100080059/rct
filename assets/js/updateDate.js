@@ -1,10 +1,11 @@
+// Format number like 2,96,77,976
 function formatIndianNumber(num) {
   return num.toString()
-    .replace(/\B(?=(\d{2})+(?!\d{3}))/g, )
-    .replace(/(\d+)(?=(\d{3})+(?!\d))/g, );
+    .replace(/\B(?=(\d{2})+(?!\d{3}))/g, ",")
+    .replace(/(\d+)(?=(\d{3})+(?!\d))/g, "$$1,");
 }
 
-// Demo counter using localStorage
+// Visitor count using localStorage
 let count = localStorage.getItem('visitCount');
 if (!count) {
   count = 1;
@@ -13,15 +14,15 @@ if (!count) {
 }
 localStorage.setItem('visitCount', count);
 
-// Display formatted visitor count
-const countElement = document.getElementById('visitorCount');
-if (countElement) {
-  countElement.textContent = formatIndianNumber(count);
+// Set counter
+const countEl = document.getElementById('visitorCount');
+if (countEl) {
+  countEl.textContent = formatIndianNumber(count);
 }
 
-// Set today's date as last updated
+// Set last updated date
 const today = new Date();
-const dateElement = document.getElementById('lastUpdatedDate');
-if (dateElement) {
-  dateElement.textContent = today.toLocaleDateString('en-GB');
+const dateEl = document.getElementById('lastUpdatedDate');
+if (dateEl) {
+  dateEl.textContent = today.toLocaleDateString('en-GB');
 }
