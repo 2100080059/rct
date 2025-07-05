@@ -709,3 +709,15 @@ body {
   font-weight: bold;
   text-align: center;
 }
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2c9e72;
+  width: 100%;
+}
+.footer-bottom p {
+  margin: 0.4rem 0;
+}
+
