@@ -680,35 +680,7 @@ footer {
   color: white;
   font-size: 12px;
 }
-body {
-  background-color: #2f3837;
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-}
 
-.counter-section {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.counter-box {
-  background-color: #e1f4e1;
-  color: #2c9e72;
-  padding: 0.3rem 0.6rem;
-  border-radius: 10px;
-  font-family: 'Courier New', monospace;
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.update-date {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-}
 .footer-bottom-center {
   text-align: center;
   padding: 1rem 0;
