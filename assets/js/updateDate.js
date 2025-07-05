@@ -1,6 +1,12 @@
 // Format number with Indian-style commas
 function formatIndianNumber(num) {
-  return num.toString().replace(/\B(?=(\d{2})+(?!\d{3}))/, ",").replace(/(\d+)(?=(\d{3})+(?!\d))/g, "$1,");
+  const numStr = num.toString();
+  const lastThree = numStr.slice(-3);
+  const rest = numStr.slice(0, -3);
+
+  if (!rest) return lastThree;
+
+  return rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + lastThree;
 }
 
 // Demo counter using localStorage
