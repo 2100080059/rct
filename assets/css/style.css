@@ -683,7 +683,7 @@ footer {
 
 /* === Visitor Counter Style === */
 footer p {
-  font-size: 0.8rem; /* Slightly bigger text */
+  font-size: 1.0rem; /* Slightly bigger text */
   font-weight: 600; /* Semi-bold */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean readable font */
   color: #f8f8f8;
@@ -694,7 +694,7 @@ footer p {
 }
 
 #visitor-count {
-  font-size: 0.8rem; /* Make the number pop */
+  font-size: 1.0rem; /* Make the number pop */
   color: #f8f8f8; /* Soft yellow for highlight */
   font-weight: bold;
 }
